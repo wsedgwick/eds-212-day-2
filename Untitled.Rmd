@@ -22,13 +22,15 @@ library(palmerpenguins)
 x <- 3
 ex_1 <- expression(x^2)
 my_derivative_1 <- deriv(ex_1, "x")
+eval(my_derivative_1)
 ```
 
 
 ```{r}
 a <- 1.2
 ex_2 <- expression(2 * (3 * a + 2)^4 - 5)
-my_derivative_2 <- deriv(ex_1, "a")
+my_derivative_2 <- deriv(ex_2, "a")
+eval(my_derivative_2)
 ```
 
 
@@ -36,8 +38,27 @@ my_derivative_2 <- deriv(ex_1, "a")
 t = 0
 ex_3 <- expression((-4 * t) / (t ^ 2 + 1) ^ 3)
 my_derivative_3 <- deriv(ex_3, "t")
+eval(my_derivative_3)
 ```
 
+```{r}
+
+ggplot(data = penguins, aes(x = bill_length_mm, y =bill_depth_mm)) +
+  geom_point(aes(color = species)) +
+  xlab("Bill Length (in mm)") +
+  ylab("Bill Depth (in mm)") +
+  ggtitle("Bill Length vs. Bill Width for 3 species of Penguin")
+```
+
+```{r}
+
+ggplot(data = penguins, aes(x = species, y = flipper_length_mm)) +
+  geom_jitter(aes(color = island)) +
+  xlab("Penguin Species") +
+  ylab("Flipper Length (in mm)") +
+  ggtitle("Penguin Species vs. Flipper Length")
+
+```
 
 
 
