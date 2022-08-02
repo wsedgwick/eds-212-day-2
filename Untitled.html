@@ -382,6 +382,15 @@ pre code {
 ## ✖ dplyr::filter() masks stats::filter()
 ## ✖ dplyr::lag()    masks stats::lag()</code></pre>
 <pre class="r"><code>library(palmerpenguins)</code></pre>
+<pre class="r"><code>x &lt;- 3
+ex_1 &lt;- expression(x^2)
+my_derivative_1 &lt;- deriv(ex_1, &quot;x&quot;)</code></pre>
+<pre class="r"><code>a &lt;- 1.2
+ex_2 &lt;- expression(2 * (3 * a + 2)^4 - 5)
+my_derivative_2 &lt;- deriv(ex_1, &quot;a&quot;)</code></pre>
+<pre class="r"><code>t = 0
+ex_3 &lt;- expression((-4 * t) / (t ^ 2 + 1) ^ 3)
+my_derivative_3 &lt;- deriv(ex_3, &quot;t&quot;)</code></pre>
 
 
 
